@@ -36,7 +36,7 @@ const ProjectList = (props: { data: ProjectProps[] | [] }) => {
 
         <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
           {[top2, top3].map((project) => (
-            <ProjectCard data={project} hasReadMore={true} />
+            <ProjectCard key={project.id} data={project} hasReadMore={true} />
           ))}
         </div>
       </div>
@@ -47,21 +47,21 @@ const ProjectList = (props: { data: ProjectProps[] | [] }) => {
           {unfeaturedProject
             .filter((_, i) => i % 3 === 0)
             .map((project) => (
-              <ProjectCard data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={false} />
             ))}
         </div>
         <div className="grid grid-cols-1 gap-4">
           {unfeaturedProject
             .filter((_, i) => i % 3 === 1)
             .map((project) => (
-              <ProjectCard data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={false} />
             ))}
         </div>
         <div className="grid grid-cols-1 gap-4">
           {unfeaturedProject
             .filter((_, i) => i % 3 === 2)
             .map((project) => (
-              <ProjectCard data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={false} />
             ))}
         </div>
       </div>

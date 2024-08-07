@@ -47,21 +47,21 @@ const ProjectList = (props: { data: ProjectProps[] | [] }) => {
           {unfeaturedProject
             .filter((_, i) => i % 3 === 0)
             .map((project) => (
-              <ProjectCard key={project.id} data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={true} />
             ))}
         </div>
         <div className="grid grid-cols-1 gap-4">
           {unfeaturedProject
             .filter((_, i) => i % 3 === 1)
             .map((project) => (
-              <ProjectCard key={project.id} data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={true} />
             ))}
         </div>
         <div className="grid grid-cols-1 gap-4">
           {unfeaturedProject
             .filter((_, i) => i % 3 === 2)
             .map((project) => (
-              <ProjectCard key={project.id} data={project} hasReadMore={false} />
+              <ProjectCard key={project.id} data={project} hasReadMore={true} />
             ))}
         </div>
       </div>

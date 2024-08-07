@@ -52,7 +52,7 @@ const ProjectDetail: React.FC = () => {
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
             {data.name}
           </h1>
-          <p className="mt-0 text-xs leading-8 text-zinc-300">
+          <p className="mt-2 text-xs leading-8 text-zinc-300">
             {data.company}
           </p>
           <p className="mt-6 text-lg leading-8 text-zinc-300">

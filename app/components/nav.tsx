@@ -1,12 +1,22 @@
 "use client";
+
 import { Navigations } from "@/utils/constants";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Navigation: React.FC = () => {
+  const router = useRouter();
+  const pathname = usePathname();
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+
+  const handleClickBack = () => {
+    if (pathname === '/') return;
+    
+    router.back();
+  };
 
 	useEffect(() => {
 		if (!ref.current) return;
@@ -40,12 +50,12 @@ export const Navigation: React.FC = () => {
             ))}
 					</div>
 
-					<Link
-						href="/"
+					<div
+						onClick={handleClickBack}
 						className="duration-200 text-zinc-300 hover:text-zinc-100"
 					>
 						<ArrowLeft className="w-6 h-6 " />
-					</Link>
+					</div>
 				</div>
 			</div>
 		</header>

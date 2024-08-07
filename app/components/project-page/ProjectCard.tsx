@@ -30,7 +30,7 @@ const ProjectCard: React.FC<Props> = ({ data, hasReadMore }) => {
                 <span>SOON</span>
               )}
             </div>
-            <span className="text-zinc-500 text-xs  flex items-center gap-1">
+            <span className="text-zinc-500 text-xs flex items-center gap-1">
               {calculateDuration(dateRange)}
             </span>
           </div>
@@ -52,7 +52,7 @@ const ProjectCard: React.FC<Props> = ({ data, hasReadMore }) => {
             // target="_blank" 
             // rel="noopener noreferer"
           >
-            <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+            <p className="text-zinc-200 hover:text-zinc-50 lg:block">
               Read more <span aria-hidden="true">&rarr;</span>
             </p>
           </Link>

@@ -35,7 +35,7 @@ export default function Home() {
 
         <div className="flex justify-center items-center text-zinc-500 gap-5 mt-3">
           {['react', 'next-js', 'javascript', 'typescript'].map((item) => (
-            <img src={`/assets/images/${item}-grey.svg`} className="rounded-sm" alt={item} width={30} loading="lazy" />
+            <img key={item} src={`/assets/images/${item}-grey.svg`} className="rounded-sm" alt={item} width={30} loading="lazy" />
           ))}
         </div>
       </div>
